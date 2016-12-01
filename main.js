@@ -21,6 +21,10 @@ document.getElementById("q0").classList.add("status-good");
 
 // 1. Declare a variable whose value is an empty array.
 //    Use any method you choose to add at least 4 items to it.
+var christmasDecor = [];
+christmasDecor.push('tree', 'tinsel', 'wreath', 'lights');
+document.getElementById("q1").innerHTML = christmasDecor;
+
 
 
 
@@ -28,13 +32,16 @@ document.getElementById("q0").classList.add("status-good");
 
 
 // 2. Add an additional item to the beginning of your array.
-
+christmasDecor.push('ornaments');
+document.getElementById("q2").innerHTML = christmasDecor;
 
 
 
 
 
 // 3. Remove the second and third items in your array.
+christmasDecor.splice(1,2);
+document.getElementById("q3").innerHTML = christmasDecor;
 
 
 
@@ -42,14 +49,15 @@ document.getElementById("q0").classList.add("status-good");
 
 
 // 4. Add two new items after the second item.
-
+christmasDecor.splice(2,0,"bows","candles");
+document.getElementById("q4").innerHTML = christmasDecor;
 
 
 
 
 
 // 5. Log to the console: 'The current length of the array is....' using the .length method
-
+console.log("The current length of the array is... " + christmasDecor.length);
 
 
 
@@ -60,7 +68,8 @@ document.getElementById("q0").classList.add("status-good");
 var things = ['mug', 'book', 'mouse', 'plant', 'sunglasses'];
 
 // 6. Change 'mouse' to 'keyboard'
-
+things.splice(2,1,"keyboard");
+document.getElementById("q6").innerHTML = things;
 
 
 
@@ -68,14 +77,16 @@ var things = ['mug', 'book', 'mouse', 'plant', 'sunglasses'];
 
 // 7. Combine all of the elements of the array into a string.
 //    (Hint: check out the 'join' method.)
-
+var thingsString = things.join();
+document.getElementById("q7").innerHTML = thingsString;
 
 
 
 
 
 // 8. Remove the first item.
-
+var thingsRemove = things.shift();
+document.getElementById("q8a").innerHTML = things;
 
 
 
@@ -84,7 +95,8 @@ var things = ['mug', 'book', 'mouse', 'plant', 'sunglasses'];
 
 
 // 9. Remove all items from the things array.
-
+things.splice(0,5);
+document.getElementById("q9").innerHTML = things;
 
 
 
@@ -95,7 +107,8 @@ var things = ['mug', 'book', 'mouse', 'plant', 'sunglasses'];
 var people = ['Bill', 'Ted', 'Emily', 'Andrea', 'Doug'];
 
 // 10. Arrange the items alphabetically. Store this Array as orderedPeople
-
+var orderedPeople = people.sort();
+document.getElementById("q10").innerHTML = orderedPeople;
 
 
 
@@ -113,15 +126,17 @@ var array4 = [
                 ["Bulldog", "Lab", "Dalmation", "Beagle"],
                 ["White", "Black", "Spotted", "Tri-color"]
               ]
-
-
+var arrayTotal = [array1, array2, array3];
+document.getElementById("q11").innerHTML = arrayTotal;
 
 
 
 
 
 // 12. Remove "Sparky" and "White" from the above array of arrays.
-
+var arrayRemove1 = array4.splice(3,1);
+var arrayRemove2 = array4.splice(8,1);
+document.getElementById("q12").innerHTML = arrayRemove + arrayRemove2;
 
 
 
@@ -133,14 +148,15 @@ var array4 = [
 var campingItems = ['tent', 'hiking boots', 'picnic table', 'corn on the cob', 'cooler'];
 
 // 13. Declare an array called lastItem using .pop() on the campingItems array.
-
+var lastItem = campingItems.pop();
 
 
 
 
 
 // 14. Add two new items to lastItem, one at the beginning and one at the end.
-
+lastItem.splice(0, 0, 'backpack', 'flashlight');
+document.getElementById("q14").innerHTML = lastItem;
 
 
 
